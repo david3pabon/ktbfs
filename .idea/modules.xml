@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bfs.iml" filepath="$PROJECT_DIR$/.idea/modules/bfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bfs_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bfs_main.iml" group="bfs" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bfs_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bfs_test.iml" group="bfs" />
+    </modules>
+  </component>
+</project>
