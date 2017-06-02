@@ -1,4 +1,4 @@
-package geekcode
+package co.geekcode
 
 /**
  * Created by @david3pabon on 5/30/2017.
@@ -10,6 +10,6 @@ val DESTINY = 3
 
 fun main (args: Array<String>) {
     val graph = Graph.build(requestJSON(URL))
-    val path = graph.bfs(ORIGIN, DESTINY)
+    val path = graph.findPath(ORIGIN, DESTINY)
     System.out.println(path)
 }

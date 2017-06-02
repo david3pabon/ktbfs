@@ -1,4 +1,4 @@
-package geekcode
+package co.geekcode
 
 import com.google.gson.Gson
 
@@ -14,13 +14,10 @@ class Graph {
     val vertices:MutableList<Pair<Int, Int>> = mutableListOf()
     var nodes: MutableMap<Int, Node> = mutableMapOf()
 
-    fun bfs(root: Int, destiny: Int) : MutableList<Int> {
-        val path: MutableList<Int> = mutableListOf()
+    fun findPath(root: Int, destiny: Int) : MutableList<Int> {
         val queue:MutableList<Int> = mutableListOf()
         var current = -1
-
         queue.add(root)
-
         while (!queue.isEmpty()) {
             current = queue.removeAt(0)
             if (current == destiny) break
@@ -32,12 +29,17 @@ class Graph {
                 queue.add(neighbor)
             }
         }
+        return makePath(current)
+    }
 
-        while (current != -1) {
-            path.add(current)
-            current = if (nodes[current] != null) nodes[current]!!.parent else -1
+    private fun makePath(initial: Int) : MutableList<Int> {
+        val path: MutableList<Int> = mutableListOf()
+        var index = initial
+        while (index != -1) {
+            path.add(index)
+            index = if (nodes[index] != null) nodes[index]!!.parent else -1
         }
-
+        path.reverse()
         return path
     }
 
